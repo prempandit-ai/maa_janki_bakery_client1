@@ -267,7 +267,9 @@ const placeOrder = async () => {
         {/* Order Summary Section */}
         <div className="w-full md:max-w-[360px] bg-white p-5 border border-gray-200 rounded-xl shadow-sm">
           <h2 className="text-lg md:text-xl font-bold text-gray-800">Order Summary</h2>
-          {isBelowMinimum && (
+<h5 className="text-xs md:text-sm text-blue-500 mt-2">
+  <span className="font-semibold">Note:</span> Choose <strong>Cash on Delivery (COD)</strong> for both cash and online payment at the time of delivery.
+</h5>          {isBelowMinimum && (
             <h2 className="text-lg md:text-sm font-bold text-red-500">
               Minimum order amount is ₹{MIN_ORDER_AMOUNT}
             </h2>
