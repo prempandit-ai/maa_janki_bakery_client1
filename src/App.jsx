@@ -24,6 +24,7 @@ import EditProduct from "./seller/EditProduct";
 import ProductList from "./seller/ProductList";
 import Orders from "./seller/Orders";
 import Dashboard from "./seller/Dashboard";
+import BakeSmartDashboard from "./pages/BakeSmartDashboard";
 
 
 
@@ -48,6 +49,7 @@ const App = () => {
          <Route path="/my-orders" element={<MyOrders/>}/>
          <Route path="/add-address" element={<AddAddress/>}/>
          <Route path="/profile" element={<UserProfile/>}/>
+         <Route path="/admin-dashboard" element={<BakeSmartDashboard />} />
 
     <Route path="/seller" 
         element={

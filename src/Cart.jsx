@@ -25,6 +25,8 @@ function Cart() {
   const [paymentOption, setPaymentOption] = useState("COD");
   const [cartRecommendations, setCartRecommendations] = useState([]);
 
+  const MIN_ORDER_AMOUNT = 149;
+
   // Fetch cart recommendations
   useEffect(() => {
     const fetchCartRecs = async () => {
@@ -56,7 +58,7 @@ function Cart() {
     }
     setCartArray(tempArray);
   };
-  
+
 const getAddress = async () => {
   try {
     const { data } = await axios.get("/api/address/get");
@@ -109,6 +111,10 @@ const placeOrder = async () => {
       return toast.error("Please select an address");
     }
 
+    if (totalCartAmount() < MIN_ORDER_AMOUNT) {
+      return toast.error(`Minimum order amount is ₹${MIN_ORDER_AMOUNT}`);
+    }
+
     if (paymentOption === "COD") {
       const { data } = await axios.post("/api/order/cod", {
         items: cartArray.map((item) => ({
@@ -135,6 +141,8 @@ const placeOrder = async () => {
 };
 
   if (!products.length || !cartItems) return null;
+
+  const isBelowMinimum = totalCartAmount() < MIN_ORDER_AMOUNT;
 
   return (
     <div className="py-6 md:py-12 max-w-6xl w-full px-4 md:px-6 mx-auto">
@@ -259,7 +267,11 @@ const placeOrder = async () => {
         {/* Order Summary Section */}
         <div className="w-full md:max-w-[360px] bg-white p-5 border border-gray-200 rounded-xl shadow-sm">
           <h2 className="text-lg md:text-xl font-bold text-gray-800">Order Summary</h2>
-          <h2 className="text-lg md:text-s font-bold text-gray-800 font-color:red">Delivery upto price 150 above</h2>
+          {isBelowMinimum && (
+            <h2 className="text-lg md:text-sm font-bold text-red-500">
+              Minimum order amount is ₹{MIN_ORDER_AMOUNT}
+            </h2>
+          )}
 
           <hr className="border-gray-100 my-4" />
 
@@ -354,7 +366,12 @@ const placeOrder = async () => {
 
           <button
             onClick={placeOrder}
-            className="w-full py-3 mt-6 cursor-pointer bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition-colors shadow-md shadow-indigo-600/10 text-sm md:text-base"
+            disabled={isBelowMinimum}
+            className={`w-full py-3 mt-6 font-bold rounded-lg transition-colors shadow-md text-sm md:text-base ${
+              isBelowMinimum
+                ? "bg-gray-300 text-gray-500 cursor-not-allowed shadow-none"
+                : "cursor-pointer bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-600/10"
+            }`}
           >
             {paymentOption === "COD" ? "Place Order" : "Pay Now"}
           </button>
