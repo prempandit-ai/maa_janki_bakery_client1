@@ -1,43 +1,38 @@
-import bakery_image from "./bakery.jpg";
-import namkeens_image from "./namkeens.PNG";
-import snacks_image from "./snacks.JPG";
-import sweets_image from "./sweet.JPG";
-import chocolates_image from "./chocolates.JPG";
-import coldrinks_image from "./coldrinks.PNG";
-import icecreams_image from "./ice-cream.png";
-import spices_image from "./spices.PNG";
-import dairy_image from "./dairy.PNG";
-import biscuits_image from "./biscuits.PNG";
-import dryfruits_image from "./dryfruits.PNG";
-import bestdeal_image from "./bestdeal.PNG";
-import others_image from "./others.PNG";
-import celebration_image from "./celebration.PNG";
-//dummy Products
-import wheat_image from "./wheat.JPG";
-import twist_image from "./twist.JPG";
-import aloo_bhujia_image from "./aloo-bhujia.PNG";
-import aloo_bhujia_2 from "./aloo-bhujia2.PNG";
+import namkeens_image from "./namkeens.png";
+import aloo_bhujia_image from "./aloo-bhujia.png";
+import aloo_bhujia_2 from "./aloo-bhujia2.png";
 
-import moong_dal_image from "./moong-dal.PNG";
-import chips_image from "./chips.PNG";
-import banana_image from "./banana.PNG";
-import gulab_jamun_image from "./gulab-jamun.PNG";
-import rasgulla_image from "./rasgulla.PNG";
-import dairymilk_image from "./dairymilk.PNG";
-import kitkat_image from "./kitkat.PNG";
-import coke_image from "./coke.PNG";
-import pepsi_image from "./pepsi.PNG";
-import vanilla_ice_image from "./vanilla-ice.PNG";
-import choco_ice_image from "./choco-ice.PNG";
-import pavbhaji_image from "./pavbhaji.PNG";
-import panipuri_image from "./panipuri.PNG";
+import moong_dal_image from "./moong-dal.png";
+import chips_image from "./chips.png";
+import banana_image from "./banana.png";
+import gulab_jamun_image from "./gulab-jamun.png";
+import rasgulla_image from "./rasgulla.png";
+import dairymilk_image from "./dairymilk.png";
+import kitkat_image from "./kitkat.png";
+import coke_image from "./coke.png";
+import pepsi_image from "./pepsi.png";
+import vanilla_ice_image from "./vanilla-ice.png";
+import choco_ice_image from "./choco-ice.png";
+import pavbhaji_image from "./pavbhaji.png";
+import panipuri_image from "./panipuri.png";
+
 // Dairy
-import amul_taaza_image from "./amul-taaza.PNG";
-import amul_butter_image from "./amul-butter.PNG";
+import amul_taaza_image from "./amul-taaza.png";
+import amul_butter_image from "./amul-butter.png";
+
+// Categories
+import coldrinks_image from "./coldrinks.png";
+import spices_image from "./spices.png";
+import dairy_image from "./dairy.png";
+import biscuits_image from "./biscuits.png";
+import dryfruits_image from "./dryfruits.png";
+import bestdeal_image from "./bestdeal.png";
+import others_image from "./others.png";
+import celebration_image from "./celebration.png";
 
 // Biscuits
-import parleG_image from "./parleG.PNG";
-import oreo_image from "./oreo.PNG";
+import parleG_image from "./parleG.png";
+import oreo_image from "./oreo.png";
 
 //icons
 import star_icon from "./star_icon.svg";
@@ -49,6 +44,13 @@ import add_icon from "./add_icon.svg";
 import upload_area from "./upload_area.png";
 import box_icon from "./box_icon.svg";
 
+import bakery_image from "./bakery.jpg";
+import chocolates_image from "./chocolates.jpg";
+import snacks_image from "./snacks.JPG";
+import sweets_image from "./sweet.JPG";
+import wheat_image from "./wheat.JPG";
+import twist_image from "./twist.jpg";
+import icecreams_image from "./ice-cream.png";
 
 
 
